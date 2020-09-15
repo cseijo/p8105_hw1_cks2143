@@ -27,7 +27,7 @@ prob1_df =
 
 Take the mean of each variable in my data frame.
 
-```{r mean_pull}
+```{r mean_pull_var}
 mean(pull(prob1_df, samp))
 mean(pull(prob1_df, samp_gt_0))
 mean(pull(prob1_df, char_vec))
