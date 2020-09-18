@@ -61,7 +61,7 @@ data("penguins", package = "palmerpenguins")
 
 **This dataset contains `r nrow(penguins)` penguins and `r ncol(penguins)` variables: `r names(penguins)`. The mean of the flipper length is `r mean(pull(penguins))`.**
 
-##### Scatter Plot of Penguin Flipper Length (mm) vs. Bill Length (mm)
+#### Scatter Plot of Penguin Flipper Length (mm) vs. Bill Length (mm)
 
 ```{r ggplot_peng}
 ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
