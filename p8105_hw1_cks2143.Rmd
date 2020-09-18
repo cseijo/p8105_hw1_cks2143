@@ -11,7 +11,6 @@ library(tidyverse)
 ```
 
 
-
 # Problem 1
 
 Create a data frame with the specified elements.
@@ -53,14 +52,13 @@ as.numeric(as.factor(pull(prob1_df, samp_gt_0))) * as.numeric(pull(prob1_df, sam
 ```
 
 
-
 # Problem 2
 
-Load penquins dataset.
+Load penguins dataset.
 
-```{r load_penquins}
+```{r load_pen}
 data("penguins", package = "palmerpenguins")
 ```
 
-
+**This dataset contains `r nrow(penguins)` penguins and `r ncol(penguins)` variables: `r names(penguins)`. The mean of the flipper length is `r mean(pull(penguins))`.**
 
