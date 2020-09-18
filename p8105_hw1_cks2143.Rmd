@@ -11,6 +11,7 @@ library(tidyverse)
 ```
 
 
+
 # Problem 1
 
 Create a data frame with the specified elements.
@@ -43,6 +44,8 @@ as.numeric(pull(prob1_df, char_vec))
 as.numeric(pull(prob1_df, factor_vec))
 ```
 
+I cannot convert the character variable, which helps explain why I cannot take the mean.
+
 ```{r}
 as.numeric(pull(prob1_df, samp_gt_0)) * as.numeric(pull(prob1_df, samp))
 as.factor(pull(prob1_df, samp_gt_0)) * as.numeric(pull(prob1_df, samp))
@@ -52,3 +55,12 @@ as.numeric(as.factor(pull(prob1_df, samp_gt_0))) * as.numeric(pull(prob1_df, sam
 
 
 # Problem 2
+
+Load penquins dataset.
+
+```{r load_penquins}
+data("penguins", package = "palmerpenguins")
+```
+
+
+
