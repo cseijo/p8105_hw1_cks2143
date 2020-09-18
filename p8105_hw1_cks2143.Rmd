@@ -47,7 +47,6 @@ I cannot convert the character variable, which helps explain why I cannot take t
 
 ```{r}
 as.numeric(pull(prob1_df, samp_gt_0)) * as.numeric(pull(prob1_df, samp))
-as.factor(pull(prob1_df, samp_gt_0)) * as.numeric(pull(prob1_df, samp))
 as.numeric(as.factor(pull(prob1_df, samp_gt_0))) * as.numeric(pull(prob1_df, samp))
 ```
 
@@ -56,9 +55,16 @@ as.numeric(as.factor(pull(prob1_df, samp_gt_0))) * as.numeric(pull(prob1_df, sam
 
 Load penguins dataset.
 
-```{r load_pen}
+```{r load_peng}
 data("penguins", package = "palmerpenguins")
 ```
 
 **This dataset contains `r nrow(penguins)` penguins and `r ncol(penguins)` variables: `r names(penguins)`. The mean of the flipper length is `r mean(pull(penguins))`.**
+
+##### Scatter Plot of Penguin Flipper Length (mm) vs. Bill Length (mm)
+
+```{r ggplot_peng}
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+ggsave("hw1plot.png")
+```
 
